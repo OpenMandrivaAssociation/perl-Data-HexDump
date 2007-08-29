@@ -44,7 +44,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root)
-%{_mandir}/man3/Data::HexDump.3pm.bz2
+%{_mandir}/man3/Data::HexDump.3pm*
 %dir %{perl_vendorlib}/Data
 %{perl_vendorlib}/Data/HexDump.pm
 %{_bindir}/perl-hexdump
