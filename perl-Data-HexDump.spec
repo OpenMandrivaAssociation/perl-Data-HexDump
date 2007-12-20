@@ -13,6 +13,7 @@ Requires:	perl
 URL:		http://www.cpan.org
 Source:		http://www.cpan.org/authors/id/F/FT/FTASSIN/%{module}-%{version}.tar.bz2
 BuildRequires:	perl-devel
+Buildroot:	%{_tmppath}/%{name}-root
 BuildArch:	noarch
 
 %description
