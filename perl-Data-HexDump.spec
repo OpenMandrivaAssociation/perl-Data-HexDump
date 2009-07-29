@@ -1,20 +1,19 @@
-%define module	Data-HexDump
-%define name	perl-%{module}
-%define version 0.02
-%define release %mkrel 7
+%define upstream_name	 Data-HexDump
+%define upstream_version 0.02
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	A Simple Hexadecimal Dumper	
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
 License:	GPL
 Group:		Development/Perl
 Requires:	perl
-URL:		http://www.cpan.org
-Source:		http://www.cpan.org/authors/id/F/FT/FTASSIN/%{module}-%{version}.tar.bz2
-BuildRequires:	perl-devel
-Buildroot:	%{_tmppath}/%{name}-root
+Url:		http://www.cpan.org/%{upstream_name}
+Source0:	http://www.cpan.org/authors/id/F/FT/FTASSIN/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildArch:	noarch
+Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Dump in hexadecimal the content of a scalar. The result is returned 
@@ -25,7 +24,7 @@ of each line shows the printable characters (all others are shown
 as single dots)
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor 
@@ -48,5 +47,3 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{perl_vendorlib}/Data
 %{perl_vendorlib}/Data/HexDump.pm
 %{_bindir}/perl-hexdump
-
-
