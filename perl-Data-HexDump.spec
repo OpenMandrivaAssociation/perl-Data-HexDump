@@ -32,14 +32,14 @@ make OPTIMIZE="$RPM_OPT_FLAGS"
 make test
 
 %install
-rm -rf $RPM_BUILD_ROOT 
+rm -rf %{buildroot} 
 %makeinstall_std 
 
 # (sb) conflicts with util-linux
-mv $RPM_BUILD_ROOT%{_bindir}/hexdump $RPM_BUILD_ROOT%{_bindir}/perl-hexdump
+mv %{buildroot}%{_bindir}/hexdump %{buildroot}%{_bindir}/perl-hexdump
 
 %clean
-rm -rf $RPM_BUILD_ROOT 
+rm -rf %{buildroot} 
 
 %files
 %defattr(-,root,root)
