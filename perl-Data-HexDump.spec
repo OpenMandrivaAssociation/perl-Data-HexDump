@@ -4,7 +4,7 @@
 Summary:	A Simple Hexadecimal Dumper	
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	16
+Release:	17
 License:	GPLv2
 Group:		Development/Perl
 Url:		http://www.cpan.org/%{modname}
