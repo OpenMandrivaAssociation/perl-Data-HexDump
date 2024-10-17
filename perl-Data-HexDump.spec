@@ -7,7 +7,7 @@ Version:	%perl_convert_version %{modver}
 Release:	17
 License:	GPLv2
 Group:		Development/Perl
-Url:		http://www.cpan.org/%{modname}
+Url:		https://www.cpan.org/%{modname}
 Source0:	http://www.cpan.org/authors/id/F/FT/FTASSIN/%{modname}-%{modver}.tar.bz2
 BuildArch:	noarch
 BuildRequires:	perl-devel
