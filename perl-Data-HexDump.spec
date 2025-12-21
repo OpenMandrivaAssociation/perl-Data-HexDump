@@ -10,6 +10,7 @@ Group:		Development/Perl
 Url:		https://www.cpan.org/%{modname}
 Source0:	http://www.cpan.org/authors/id/F/FT/FTASSIN/%{modname}-%{modver}.tar.bz2
 BuildArch:	noarch
+BuildRequires:	make
 BuildRequires:	perl-devel
 Requires:	perl
 
