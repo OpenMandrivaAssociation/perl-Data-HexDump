@@ -1,14 +1,14 @@
 %define modname	Data-HexDump
-%define modver	0.02
+%define modver	0.04
 
 Summary:	A Simple Hexadecimal Dumper	
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	17
+Version:	%{modver}
+Release:	1
 License:	GPLv2
 Group:		Development/Perl
-Url:		https://www.cpan.org/%{modname}
-Source0:	http://www.cpan.org/authors/id/F/FT/FTASSIN/%{modname}-%{modver}.tar.bz2
+Url:		https://github.com/neilb/Data-HexDump
+Source0:	https://cpan.metacpan.org/authors/id/N/NE/NEILB/Data-HexDump-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	make
 BuildRequires:	perl-devel
