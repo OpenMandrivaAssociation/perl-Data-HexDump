@@ -1,10 +1,10 @@
-%define modname	Data-HexDump
-%define modver	0.04
+%define modname Data-HexDump
+%define modver 0.04
 
 Summary:	A Simple Hexadecimal Dumper	
 Name:		perl-%{modname}
 Version:	%{modver}
-Release:	1
+Release:	3
 License:	GPLv2
 Group:		Development/Perl
 Url:		https://github.com/neilb/Data-HexDump
@@ -33,10 +33,10 @@ as single dots)
 %make test
 
 %install
-%makeinstall_std 
+%makeinstall_std
+install -D -m 755 eg/hexdump %{buildroot}%{_bindir}/perl-hexdump 
 
 # (sb) conflicts with util-linux
-mv %{buildroot}%{_bindir}/hexdump %{buildroot}%{_bindir}/perl-hexdump
 
 %files
 %dir %{perl_vendorlib}/Data
